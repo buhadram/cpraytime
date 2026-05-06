@@ -27,6 +27,8 @@ void PrayTime::setTimezone(double offset) {
     timeZone = offset;
 }
 
+// Calculate sun position   
+// Returns declination and equation of time
 PrayTime::SunPos PrayTime::sunPosition(double time) {
     double D = (utcTime / 86400.0) - 10957.5 + (time / 24.0) - (lng / 360.0);
     double g = fixAngle(357.529 + 0.98560028 * D);

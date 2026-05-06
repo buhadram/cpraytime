@@ -1,0 +1,29 @@
+{
+    "name": "cpraytime",
+    "version": "1.0.0",
+    "description": "A C++ library for calculating Islamic prayer times based on various methods.",
+    "main": "src/praytime.cpp",
+    "scripts": {
+        "build": "g++ -std=c++17 -o praytime src/praytime.cpp",
+        "test": "echo \"No tests specified\" && exit 0"
+    },
+    "author": "Lutfi Shihab",
+    "license": "MIT",
+    "dependencies": {
+
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/buhadram/cpraytime.git"
+    },
+    "keywords": [
+        "islamic",
+        "prayer",
+        "times"
+    ],
+    "bugs": {
+        "url": "https://github.com/buhadram/cpraytime/issues"
+    },
+    "homepage": "https://github.com/buhadram/cpraytime#README.md"
+
+}

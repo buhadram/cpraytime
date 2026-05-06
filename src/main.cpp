@@ -4,7 +4,7 @@
 #include <iomanip>
 #include <chrono>
 #include <ctime>
-#include "PrayTime.h"
+#include "praytime.h"
 
 void printHeader(const std::string& method, double lat, double lng) {
     std::cout << "\nPrayer Times for " << lat << ", " << lng << " (Method: " << method << ")\n";
@@ -52,7 +52,9 @@ int main(int argc, char* argv[]) {
     for (int day = 1; day <= numDays; ++day) {
         auto times = pt.getTimes(year, month, day);
         
-        std::cout << std::left << std::setw(4) << year << "-" 
+        // For numeric fields we want zero-padding on the left (e.g. 05, 01).
+        // `std::left` would pad on the right when combined with `std::setfill('0')`.
+        std::cout << std::right << std::setw(4) << year << "-" 
                   << std::setfill('0') << std::setw(2) << month << "-" 
                   << std::setw(2) << day << std::setfill(' ') << "  "
                   << std::setw(10) << times["Fajr"]

@@ -1,6 +1,8 @@
 # CprayTime
 ## PrayTime calculator
 
+[![MIT License][license-image]][license] [![NPM version][npm-version-image]][npm-url]
+
 C++ Prayer Times Calculator
 This project is a C++ port of the praytime.js library, optimized for performance and modularity. 
 It includes a core library (static and shared) and a CLI tool to generate prayer time tables.

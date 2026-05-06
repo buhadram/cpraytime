@@ -42,6 +42,11 @@ cmake ..
 ```
 make
 ```
+or
+```
+cmake -DCMAKE_BUILD_TYPE=Release ..
+make
+```
 
 ### Running the CLI Tool
 The executable praytime_cli requires three arguments: latitude, longitude, and method.

@@ -13,6 +13,12 @@ set(LIB_SOURCES ${SRC_DIR}/praytime.cpp)
 # Ensure the compiler can find the headers in the src directory
 include_directories(${SRC_DIR})
 
+# Enable high-performance optimizations
+if(NOT MSVC)
+    add_compile_options(-O3 -march=native)
+    message(STATUS "Optimization enabled: -O3 -march=native")
+endif()
+
 # Create Static Library (libpraytime.a)
 add_library(praytime_static STATIC ${LIB_SOURCES})
 set_target_properties(praytime_static PROPERTIES OUTPUT_NAME "praytime")

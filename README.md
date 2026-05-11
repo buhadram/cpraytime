@@ -54,9 +54,32 @@ make
 The executable praytime_cli requires three arguments: latitude, longitude, and method.
 
 Local Example: Tigard, Oregon
+
 To generate a table for the current month in Tigard, Oregon (approximate coordinates: 45.43, -122.77) using the ISNA method:
 
 ```
-./praytime_cli 45.43 -122.77 ISNA
+./praytime_cli 45.455277777778 -122.750833333 ISNA
 ```
 
+### Conversion of Longitude/Latitude to their decimals
+
+To convert Degrees, Minutes, and Seconds (DMS) to Decimal Degrees, use this formula:
+
+\(\text{Decimal\ Degrees}=\text{Degrees}+\left(\frac{\text{Minutes}}{60}\right)+\left(\frac{\text{Seconds}}{3600}\right)\)
+
+Quick Conversion Steps
+1. Divide the minutes by 60.
+2. Divide the seconds by 3600. 
+3. Add those two values to the degrees.
+4. Assign the sign based on direction:
+   - North (N) / East (E): Positive (+)
+   - South (S) / West (W): Negative (-)
+
+### Example: 
+45° 27' 19" N
+- 45 + \frac{27}{60} + \frac{19}{3600} = 45.455277777778
+- Since it is North, the final answer is +45.455277777778
+
+122° 45' 03" W
+- 122 + \frac{45}{60} + \frac{03}{3600} = 
+- Since it is West, the final answer is -122.750833333

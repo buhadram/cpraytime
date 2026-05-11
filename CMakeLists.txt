@@ -8,7 +8,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
 
 # Explicitly list the library implementation files
-set(LIB_SOURCES ${SRC_DIR}/praytime.cpp)
+set(LIB_SOURCES
+    ${SRC_DIR}/praytime.cpp
+    ${SRC_DIR}/geoLoc.cpp
+)
 
 # Ensure the compiler can find the headers in the src directory
 include_directories(${SRC_DIR})
